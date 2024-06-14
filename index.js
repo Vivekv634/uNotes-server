@@ -16,12 +16,12 @@ mongoose.connect(process.env.DB_URI_DEV, { useNewUrlParser: true, useUnifiedTopo
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(cors());
 
-    app.use('/auth', userAuthRoutes);
-    app.use('/user', userRoutes);
+    app.use('/api/auth', userAuthRoutes);
+    app.use('/api/user', userRoutes);
     app.get('/', (req, res) => {
         res.send('Server is up!');
     })
     app.listen(PORT, () => {
-        console.log(`Server is running at ${PORT}!`);
+        console.log(`Server is running!`);
     })
 });
