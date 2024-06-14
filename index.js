@@ -22,6 +22,6 @@ mongoose.connect(process.env.DB_URI_DEV, { useNewUrlParser: true, useUnifiedTopo
         res.send('Server is up!');
     })
     app.listen(PORT, () => {
-        console.log(`Server is listening to http://localhost:${PORT}`);
+        console.log(`Server is running at ${PORT}!`);
     })
 });

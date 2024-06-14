@@ -2,7 +2,7 @@ require('dotenv').config();
 const jwt = require('jsonwebtoken');
 
 const authenticate = (req, res, next) => {
-    const userTokenID = req.query.id;
+    const userTokenID = req.query.userid;
     if (!userTokenID) {
         res.json({ error: 'User Authentication failed' });
     } else {
